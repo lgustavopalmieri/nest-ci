@@ -5,7 +5,7 @@ on:
       - develop
   pull_request:
     types: [opened, synchronize, reopened]
-          
+
 jobs:
   pull-request-checks:
     runs-on: ubuntu-latest
@@ -38,5 +38,7 @@ jobs:
         uses: sonarsource/sonarqube-quality-gate-action@master
         # Force to fail step after specific time.
         timeout-minutes: 5
+        env:
+          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }} 
 
       # may needed to provide secrets
