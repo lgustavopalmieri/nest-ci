@@ -1,5 +1,8 @@
 name: pull-requests-workflow
 on:
+  push:
+    branches:
+      - trying-action
   pull_request:
     types: [opened, synchronize, reopened]
       
