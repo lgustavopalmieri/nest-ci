@@ -9,6 +9,9 @@ jobs:
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v2
+         with:
+          # Disabling shallow clone is recommended for improving relevancy of reporting.
+          fetch-depth: 0
 
       - name: Use Node.js
         uses: actions/setup-node@v2 
@@ -23,5 +26,14 @@ jobs:
 
       - name: Run test  
         run: npm test
+
+      - name: SonarQube Scan
+        uses: sonarsource/sonarqube-scan-action@master
+
+      - name: SonarQube Quality Gate check
+        id: sonarqube-quality-gate-check
+        uses: sonarsource/sonarqube-quality-gate-action@master
+        # Force to fail step after specific time.
+        timeout-minutes: 5
 
       # new file
