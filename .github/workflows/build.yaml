@@ -22,8 +22,6 @@ jobs:
 
       - name: Run test  
         run: npm test
-
-      - run: sonar-scanner
       
       - uses: sonarsource/sonarqube-scan-action@master
         env:
