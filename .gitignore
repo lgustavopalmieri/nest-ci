@@ -3,6 +3,7 @@
 /node_modules
 
 # Logs
+tokens.md
 logs
 *.log
 npm-debug.log*
@@ -13,6 +14,7 @@ lerna-debug.log*
 
 # OS
 .DS_Store
+.scannerwork
 
 # Tests
 /coverage
