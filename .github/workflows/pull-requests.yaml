@@ -9,9 +9,9 @@ jobs:
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v2
-         with:
-          # Disabling shallow clone is recommended for improving relevancy of reporting.
+        with:
           fetch-depth: 0
+          # Disabling shallow clone is recommended for improving relevancy of reporting.
 
       - name: Use Node.js
         uses: actions/setup-node@v2 
