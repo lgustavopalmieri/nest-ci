@@ -1,4 +1,4 @@
-name: ci-nest-workflow
+name: test-checks-workflow
 on: [push]
 jobs:
   test-checks:
