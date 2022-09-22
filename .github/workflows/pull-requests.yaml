@@ -1,5 +1,8 @@
 name: pull-requests-workflow
 on:
+  push:
+    branches:
+      - '**'
   pull_request:
     branches:
       - develop
