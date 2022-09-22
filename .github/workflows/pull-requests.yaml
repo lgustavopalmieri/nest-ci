@@ -5,7 +5,7 @@ on:
       - develop
   pull_request:
     branches:
-      - develop
+      types: [opened, synchronize, reopened]
 jobs:
   pull-request-checks:
     runs-on: ubuntu-latest
