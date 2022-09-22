@@ -23,4 +23,24 @@ export class NewModuleService {
   remove(id: number) {
     return `This action removes a #${id} newModule`;
   }
+
+  create5(createNewModuleDto: CreateNewModuleDto) {
+    return 'This action adds a new newModule';
+  }
+
+  findAll4() {
+    return `This action returns all newModule`;
+  }
+
+  findOne3(id: number) {
+    return `This action returns a #${id} newModule`;
+  }
+
+  update2(id: number, updateNewModuleDto: UpdateNewModuleDto) {
+    return `This action updates a #${id} newModule`;
+  }
+
+  remove1(id: number) {
+    return `This action removes a #${id} newModule`;
+  }
 }

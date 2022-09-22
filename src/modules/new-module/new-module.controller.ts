@@ -42,4 +42,32 @@ export class NewModuleController {
   remove(@Param('id') id: string) {
     return this.newModuleService.remove(+id);
   }
+
+  @Post()
+  create5(@Body() createNewModuleDto: CreateNewModuleDto) {
+    return this.newModuleService.create(createNewModuleDto);
+  }
+
+  @Get()
+  findAll4() {
+    return this.newModuleService.findAll();
+  }
+
+  @Get(':id')
+  findOne3(@Param('id') id: string) {
+    return this.newModuleService.findOne(+id);
+  }
+
+  @Patch(':id')
+  update2(
+    @Param('id') id: string,
+    @Body() updateNewModuleDto: UpdateNewModuleDto,
+  ) {
+    return this.newModuleService.update(+id, updateNewModuleDto);
+  }
+
+  @Delete(':id')
+  remove1(@Param('id') id: string) {
+    return this.newModuleService.remove(+id);
+  }
 }
